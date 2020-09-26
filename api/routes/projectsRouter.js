@@ -15,7 +15,8 @@ router.post('/',(req, res) => {
         )
         .catch(error =>{
             res.status(500).json(
-                    { error: error }
+                    { error: error,
+                        message:error.message }
                 )
         })
 })
@@ -29,7 +30,8 @@ router.get('/', (req, res) => {
         )
         .catch(error => {
             res.status(500).json(
-                    { error: error }
+                    { error: error,
+                        message:error.message }
                 )
         })
 
